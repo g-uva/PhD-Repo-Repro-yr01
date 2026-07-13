@@ -2,6 +2,10 @@
 
 This repository is a versioned catalogue for research papers, their software artifacts, and the scientific lineage of experiments. Manuscripts and publication metadata live under `paper/` and `metadata/`; executable code, installation guidance, and experiment provenance live under `artifact/`.
 
+## Current research direction
+
+As of **2026-07-13**, the research direction is focused on **GPU telemetry, observability, and probing approaches for characterising AI workloads**. See [`docs/research-direction.md`](docs/research-direction.md) for the living scope statement.
+
 ## Repository catalogue
 
 | Research work | Paper version | Artifact status | Artifact version | Paper | Artifact and installation | Metadata | Experiments |
