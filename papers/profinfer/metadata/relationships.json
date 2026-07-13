@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    { "source": "paper:profinfer", "predicate": "has-artifact", "target": "artifact:profinfer", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The implementation identifies itself as ProfInfer and traces llama.cpp inference." } },
+    { "source": "artifact:profinfer", "predicate": "supports-paper", "target": "paper:profinfer", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The artifact documentation names ProfInfer." } },
+    { "source": "paper:profinfer", "predicate": "published-at", "target": "venue:arxiv", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf", "description": "Embedded PDF metadata identifies arXiv:2601.20755v2." } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:bohua-zou", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:debayan-roy", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:dhimankumar-yogesh-airao", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:weihao-xu", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:binqi-sun", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:yutao-liu", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:haibo-chen", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
+    { "source": "artifact:profinfer", "predicate": "uses-software", "target": "software:llama-cpp", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The Linux profiler runs and probes llama.cpp." } },
+    { "source": "artifact:profinfer", "predicate": "uses-software", "target": "software:bcc", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The prerequisites require BCC." } },
+    { "source": "artifact:profinfer", "predicate": "uses-software", "target": "software:ebpf", "evidence": { "source_file": "papers/profinfer/artifact/Linux/trace_llm.c", "description": "The profiler includes eBPF tracing programs." } },
+    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:qwen2.5-0.5b-instruct-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
+    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:llama-3.2-1b-instruct-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
+    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:deepseek-r1-distill-qwen-1.5b-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
+    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:gemma-2-2b-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
+    { "source": "artifact:profinfer", "predicate": "defines-experiment", "target": "experiment:profinfer-exp-0001", "evidence": { "source_file": "papers/profinfer/artifact/experiments/index.json" } },
+    { "source": "artifact:profinfer", "predicate": "defines-experiment", "target": "experiment:profinfer-exp-0014", "evidence": { "source_file": "papers/profinfer/artifact/experiments/index.json", "description": "The intervening IDs are catalogued in the same index." } }
+  ]
+}
+

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-catalogue.schema.json",
+  "title": "Research catalogue",
+  "type": "object",
+  "required": ["$schema", "catalogue_version", "project", "papers", "artifacts"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string", "pattern": "^\\./schemas/[^/]+\\.json$" },
+    "catalogue_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "project": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 }
+      }
+    },
+    "papers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/reference" }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/reference" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*:[a-z0-9][a-z0-9.-]*$"
+    },
+    "relativePath": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "reference": {
+      "type": "object",
+      "required": ["id", "path"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "path": { "$ref": "#/$defs/relativePath" }
+      }
+    }
+  }
+}
+

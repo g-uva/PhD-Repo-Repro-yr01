@@ -1,0 +1,46 @@
+{
+  "people": [
+    { "id": "person:bohua-zou", "name": "Bohua Zou", "affiliations": [] },
+    { "id": "person:debayan-roy", "name": "Debayan Roy", "affiliations": [] },
+    { "id": "person:dhimankumar-yogesh-airao", "name": "Dhimankumar Yogesh Airao", "affiliations": [] },
+    { "id": "person:weihao-xu", "name": "Weihao Xu", "affiliations": [] },
+    { "id": "person:binqi-sun", "name": "Binqi Sun", "affiliations": [] },
+    { "id": "person:yutao-liu", "name": "Yutao Liu", "affiliations": [] },
+    { "id": "person:haibo-chen", "name": "Haibo Chen", "affiliations": [] }
+  ],
+  "organisations": [],
+  "software": [
+    { "id": "software:profinfer", "name": "ProfInfer", "type": "profiler", "version": "0.1.0", "url": null },
+    { "id": "software:llama-cpp", "name": "llama.cpp", "type": "inference-runtime", "version": "d04e7163c85a847bc61d58c22f2c503596db7aa8", "url": "https://github.com/ggml-org/llama.cpp" },
+    { "id": "software:oh-llama-cpp", "name": "oh-llama.cpp", "type": "inference-runtime-fork", "version": null, "url": "https://gitcode.com/openharmony-robot/oh-llama.cpp" },
+    { "id": "software:bcc", "name": "BCC", "type": "tracing-framework", "version": null, "url": "https://github.com/iovisor/bcc" },
+    { "id": "software:ebpf", "name": "eBPF", "type": "kernel-technology", "version": null, "url": null }
+  ],
+  "datasets": [
+    { "id": "dataset:qwen2.5-0.5b-instruct-gguf", "name": "Qwen2.5 0.5B Instruct GGUF Q4_K_M", "type": "model-artifact", "version": null, "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF", "tracked_in_git": false },
+    { "id": "dataset:llama-3.2-1b-instruct-gguf", "name": "Llama 3.2 1B Instruct GGUF Q4_K_M", "type": "model-artifact", "version": null, "url": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF", "tracked_in_git": false },
+    { "id": "dataset:deepseek-r1-distill-qwen-1.5b-gguf", "name": "DeepSeek R1 Distill Qwen 1.5B GGUF Q4_K_M", "type": "model-artifact", "version": null, "url": "https://huggingface.co/QuantFactory/DeepSeek-R1-Distill-Qwen-1.5B-GGUF", "tracked_in_git": false },
+    { "id": "dataset:gemma-2-2b-gguf", "name": "Gemma 2 2B GGUF Q4_K_M", "type": "model-artifact", "version": null, "url": "https://huggingface.co/lm-kit/gemma-2-2b-gguf", "tracked_in_git": false }
+  ],
+  "experiments": [
+    { "id": "experiment:profinfer-exp-0001", "name": "exp-0001", "metadata_path": "../artifact/experiments/exp-0001/metadata.json" },
+    { "id": "experiment:profinfer-exp-0002", "name": "exp-0002", "metadata_path": "../artifact/experiments/exp-0002/metadata.json" },
+    { "id": "experiment:profinfer-exp-0003", "name": "exp-0003", "metadata_path": "../artifact/experiments/exp-0003/metadata.json" },
+    { "id": "experiment:profinfer-exp-0004", "name": "exp-0004", "metadata_path": "../artifact/experiments/exp-0004/metadata.json" },
+    { "id": "experiment:profinfer-exp-0005", "name": "exp-0005", "metadata_path": "../artifact/experiments/exp-0005/metadata.json" },
+    { "id": "experiment:profinfer-exp-0006", "name": "exp-0006", "metadata_path": "../artifact/experiments/exp-0006/metadata.json" },
+    { "id": "experiment:profinfer-exp-0007", "name": "exp-0007", "metadata_path": "../artifact/experiments/exp-0007/metadata.json" },
+    { "id": "experiment:profinfer-exp-0008", "name": "exp-0008", "metadata_path": "../artifact/experiments/exp-0008/metadata.json" },
+    { "id": "experiment:profinfer-exp-0009", "name": "exp-0009", "metadata_path": "../artifact/experiments/exp-0009/metadata.json" },
+    { "id": "experiment:profinfer-exp-0010", "name": "exp-0010", "metadata_path": "../artifact/experiments/exp-0010/metadata.json" },
+    { "id": "experiment:profinfer-exp-0011", "name": "exp-0011", "metadata_path": "../artifact/experiments/exp-0011/metadata.json" },
+    { "id": "experiment:profinfer-exp-0012", "name": "exp-0012", "metadata_path": "../artifact/experiments/exp-0012/metadata.json" },
+    { "id": "experiment:profinfer-exp-0013", "name": "exp-0013", "metadata_path": "../artifact/experiments/exp-0013/metadata.json" },
+    { "id": "experiment:profinfer-exp-0014", "name": "exp-0014", "metadata_path": "../artifact/experiments/exp-0014/metadata.json" }
+  ],
+  "venues": [
+    { "id": "venue:arxiv", "name": "arXiv", "type": "preprint-repository", "url": "https://arxiv.org" }
+  ],
+  "funding_projects": []
+}
+

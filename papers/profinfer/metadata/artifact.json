@@ -1,0 +1,80 @@
+{
+  "id": "artifact:profinfer",
+  "type": "research-artifact",
+  "name": "ProfInfer",
+  "version": "0.1.0",
+  "status": "working",
+  "supports_paper": "paper:profinfer",
+  "source_path": "../artifact",
+  "repository": {
+    "url": null,
+    "current_commit": "a311e7c24687b878ec560d77ea7bfd04e9036e04",
+    "remote_status": "No Git remote is configured in the artifact repository.",
+    "contributors_observed_in_git_history": [
+      {
+        "name": "Gonçalo Ferreira",
+        "email": "g.j.teixeiradepinhoferreira@uva.nl",
+        "role": "repository contributor; not asserted to be an author of ProfInfer"
+      }
+    ]
+  },
+  "components": [
+    { "name": "Linux profiler", "path": "../artifact/Linux" },
+    { "name": "OpenHarmony profiler", "path": "../artifact/OpenHarmony" },
+    { "name": "Experiment provenance", "path": "../artifact/experiments/index.json" }
+  ],
+  "software": ["software:profinfer", "software:llama-cpp", "software:bcc", "software:ebpf"],
+  "datasets": [
+    "dataset:qwen2.5-0.5b-instruct-gguf",
+    "dataset:llama-3.2-1b-instruct-gguf",
+    "dataset:deepseek-r1-distill-qwen-1.5b-gguf",
+    "dataset:gemma-2-2b-gguf"
+  ],
+  "experiments": [
+    "experiment:profinfer-exp-0001", "experiment:profinfer-exp-0002",
+    "experiment:profinfer-exp-0003", "experiment:profinfer-exp-0004",
+    "experiment:profinfer-exp-0005", "experiment:profinfer-exp-0006",
+    "experiment:profinfer-exp-0007", "experiment:profinfer-exp-0008",
+    "experiment:profinfer-exp-0009", "experiment:profinfer-exp-0010",
+    "experiment:profinfer-exp-0011", "experiment:profinfer-exp-0012",
+    "experiment:profinfer-exp-0013", "experiment:profinfer-exp-0014"
+  ],
+  "environments": ["Linux with BCC/eBPF and a compatible kernel", "OpenHarmony"],
+  "reproducibility": {
+    "documentation_available": true,
+    "automated_setup": false,
+    "containerised": false,
+    "tests_available": false,
+    "sample_data_available": false,
+    "expected_outputs_documented": true,
+    "licence_available": false,
+    "citation_metadata_available": false
+  },
+  "execution": {
+    "entry_points": ["Linux/run_llama.py", "Linux/main.py", "OpenHarmony/Makefile"],
+    "requirements": ["Linux/requirements.txt", "Linux/pyproject.toml"],
+    "commands": [
+      "cd Linux && sudo /usr/bin/python3 run_llama.py --config jsons/config.json",
+      "cd Linux && ./run_cpu_models.sh",
+      "cd OpenHarmony && make"
+    ]
+  },
+  "external_repositories": [
+    {
+      "id": "software:llama-cpp",
+      "url": "https://github.com/ggml-org/llama.cpp.git",
+      "revision": "d04e7163c85a847bc61d58c22f2c503596db7aa8"
+    },
+    {
+      "id": "software:oh-llama-cpp",
+      "url": "https://gitcode.com/openharmony-robot/oh-llama.cpp",
+      "revision": null
+    }
+  ],
+  "metadata_gaps": [
+    "The original ProfInfer artifact repository URL is not recoverable from Git configuration; the existing Linux README clone command appears to name the oh-llama.cpp dependency and requires author confirmation.",
+    "No artifact licence or citation file is present.",
+    "The exact BCC, kernel, hardware, and OpenHarmony versions are not recorded.",
+    "Existing experiment outputs were generated after the last artifact commit, so a truthful per-run Git commit cannot be verified."
+  ]
+}

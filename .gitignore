@@ -1,0 +1,13 @@
+# Local heavyweight dependencies and model data
+/models/
+/llama.cpp/
+/llama.cp/
+
+# Common generated/local files
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+

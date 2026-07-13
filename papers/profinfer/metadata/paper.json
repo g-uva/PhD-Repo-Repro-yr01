@@ -1,0 +1,77 @@
+{
+  "id": "paper:profinfer",
+  "type": "research-paper",
+  "title": "ProfInfer: An eBPF-based Fine-Grained LLM Inference Profiler",
+  "short_name": "ProfInfer",
+  "status": "preprint",
+  "version": "arXiv:2601.20755v2",
+  "publication": {
+    "venue": "venue:arxiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2601.20755",
+    "url": "https://arxiv.org/abs/2601.20755v2"
+  },
+  "authors": [
+    "person:bohua-zou",
+    "person:debayan-roy",
+    "person:dhimankumar-yogesh-airao",
+    "person:weihao-xu",
+    "person:binqi-sun",
+    "person:yutao-liu",
+    "person:haibo-chen"
+  ],
+  "abstract": null,
+  "research_questions": [],
+  "contributions": [],
+  "classification": {
+    "research_functions": [
+      "measurement-telemetry",
+      "workload-characterisation",
+      "benchmarking-evaluation"
+    ],
+    "technical_categories": [
+      "measurement-and-telemetry",
+      "ai-serving-and-inference",
+      "gpu-and-accelerator-systems",
+      "benchmarking"
+    ],
+    "system_layers": [
+      "application",
+      "model",
+      "runtime",
+      "operator",
+      "library",
+      "accelerator",
+      "os-kernel"
+    ],
+    "resource_types": ["cpu", "gpu", "accelerator", "memory", "time"],
+    "workload_types": ["ai-inference", "llm-serving", "benchmark"],
+    "infrastructure_contexts": ["bare-metal", "heterogeneous"],
+    "telemetry_sources": ["hardware-counter", "software-instrumentation", "ebpf", "perf", "custom-profiler"],
+    "methodologies": ["controlled-experiment", "benchmark", "testbed", "comparative-evaluation"],
+    "sustainability_dimensions": ["hardware-utilisation"]
+  },
+  "classification_evidence": [
+    {
+      "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf",
+      "description": "The title identifies an eBPF fine-grained LLM inference profiler; the manuscript evaluates profiling across CPU and accelerator backends."
+    },
+    {
+      "source_file": "papers/profinfer/artifact/Linux/README.md",
+      "description": "The artifact documents uprobes, operator tracing, PMU/perf events, llama.cpp inference, and heterogeneous backends."
+    }
+  ],
+  "keywords": ["eBPF", "LLM inference", "profiling", "llama.cpp"],
+  "artifact": "artifact:profinfer",
+  "source_path": "../paper",
+  "metadata_gaps": [
+    "The abstract, research questions, and contributions have not been transcribed from the PDF.",
+    "Publication beyond the verified arXiv preprint is unknown.",
+    "Author affiliations have not been verified."
+  ],
+  "evidence": {
+    "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf",
+    "description": "Title, author list, arXiv version, DOI, year, and URL are taken from embedded PDF metadata."
+  }
+}
+
