@@ -18,6 +18,16 @@ External repositories used by the current artifact are pinned or marked unknown 
 
 The machine-readable entry point is [`catalog.json`](catalog.json). Its metadata model is documented in [`docs/metadata-model.md`](docs/metadata-model.md).
 
+## Interactive graph
+
+Generate an interactive, black-outlined Cytoscape.js visualisation of the entities, provenance records, and relationships:
+
+```bash
+python3 scripts/generate_graph.py
+```
+
+Open [`docs/research-graph.html`](docs/research-graph.html) in a browser. The graph data is embedded in the HTML; loading Cytoscape.js itself requires an internet connection.
+
 ## Local-only dependencies and data
 
 Model weights and external source checkouts are deliberately not versioned. The root `.gitignore` excludes `models/`, `llama.cpp/`, and the common misspelling `llama.cp/`. Each artifact documents the exact external revision and expected local layout needed for reproduction.
