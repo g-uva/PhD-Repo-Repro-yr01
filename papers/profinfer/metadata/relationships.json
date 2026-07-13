@@ -1,24 +1,722 @@
 {
   "relationships": [
-    { "source": "paper:profinfer", "predicate": "has-artifact", "target": "artifact:profinfer", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The implementation identifies itself as ProfInfer and traces llama.cpp inference." } },
-    { "source": "artifact:profinfer", "predicate": "supports-paper", "target": "paper:profinfer", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The artifact documentation names ProfInfer." } },
-    { "source": "paper:profinfer", "predicate": "published-at", "target": "venue:arxiv", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf", "description": "Embedded PDF metadata identifies arXiv:2601.20755v2." } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:bohua-zou", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:debayan-roy", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:dhimankumar-yogesh-airao", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:weihao-xu", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:binqi-sun", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:yutao-liu", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "paper:profinfer", "predicate": "authored-by", "target": "person:haibo-chen", "evidence": { "source_file": "papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf" } },
-    { "source": "artifact:profinfer", "predicate": "uses-software", "target": "software:llama-cpp", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The Linux profiler runs and probes llama.cpp." } },
-    { "source": "artifact:profinfer", "predicate": "uses-software", "target": "software:bcc", "evidence": { "source_file": "papers/profinfer/artifact/Linux/README.md", "description": "The prerequisites require BCC." } },
-    { "source": "artifact:profinfer", "predicate": "uses-software", "target": "software:ebpf", "evidence": { "source_file": "papers/profinfer/artifact/Linux/trace_llm.c", "description": "The profiler includes eBPF tracing programs." } },
-    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:qwen2.5-0.5b-instruct-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
-    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:llama-3.2-1b-instruct-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
-    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:deepseek-r1-distill-qwen-1.5b-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
-    { "source": "artifact:profinfer", "predicate": "uses-dataset", "target": "dataset:gemma-2-2b-gguf", "evidence": { "source_file": "papers/profinfer/artifact/REPRODUCING.md" } },
-    { "source": "artifact:profinfer", "predicate": "defines-experiment", "target": "experiment:profinfer-exp-0001", "evidence": { "source_file": "papers/profinfer/artifact/experiments/index.json" } },
-    { "source": "artifact:profinfer", "predicate": "defines-experiment", "target": "experiment:profinfer-exp-0014", "evidence": { "source_file": "papers/profinfer/artifact/experiments/index.json", "description": "The intervening IDs are catalogued in the same index." } }
+    {
+      "source": "paper:profinfer",
+      "predicate": "has-artifact",
+      "target": "artifact:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/Linux/README.md",
+        "description": "The implementation identifies itself as ProfInfer and traces llama.cpp inference."
+      }
+    },
+    {
+      "source": "artifact:profinfer",
+      "predicate": "supports-paper",
+      "target": "paper:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/Linux/README.md",
+        "description": "The artifact documentation names ProfInfer."
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "published-at",
+      "target": "venue:mlsys",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf",
+        "description": "Embedded PDF metadata identifies the manuscript subject as MLSys 2026; final publication status remains unverified."
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:bohua-zou",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:debayan-roy",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:dhimankumar-yogesh-airao",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:weihao-xu",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:binqi-sun",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:yutao-liu",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "paper:profinfer",
+      "predicate": "authored-by",
+      "target": "person:haibo-chen",
+      "evidence": {
+        "source_file": "papers/profinfer/paper/profinfer-mlsys-2026.pdf"
+      }
+    },
+    {
+      "source": "artifact:profinfer",
+      "predicate": "implements-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/README.md",
+        "description": "This artifact contains the ProfInfer implementation."
+      }
+    },
+    {
+      "source": "software:profinfer",
+      "predicate": "uses-software",
+      "target": "software:llama-cpp",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/Linux/README.md",
+        "description": "ProfInfer runs and probes llama.cpp inference."
+      }
+    },
+    {
+      "source": "software:profinfer",
+      "predicate": "uses-software",
+      "target": "software:oh-llama-cpp",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/Linux/README.md",
+        "description": "The documented accelerator backend uses the oh-llama.cpp fork."
+      }
+    },
+    {
+      "source": "software:profinfer",
+      "predicate": "uses-software",
+      "target": "software:bcc",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/Linux/README.md",
+        "description": "The Linux implementation requires BCC."
+      }
+    },
+    {
+      "source": "software:profinfer",
+      "predicate": "uses-software",
+      "target": "software:ebpf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/Linux/trace_llm.c",
+        "description": "ProfInfer includes eBPF tracing programs."
+      }
+    },
+    {
+      "source": "artifact:profinfer",
+      "predicate": "uses-dataset",
+      "target": "dataset:qwen2.5-0.5b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/REPRODUCING.md"
+      }
+    },
+    {
+      "source": "artifact:profinfer",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/REPRODUCING.md"
+      }
+    },
+    {
+      "source": "artifact:profinfer",
+      "predicate": "uses-dataset",
+      "target": "dataset:deepseek-r1-distill-qwen-1.5b-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/REPRODUCING.md"
+      }
+    },
+    {
+      "source": "artifact:profinfer",
+      "predicate": "uses-dataset",
+      "target": "dataset:gemma-2-2b-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/REPRODUCING.md"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0001",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0001/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0001",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0001/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0001",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0001",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0002",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0002/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0002",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0002/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0002",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0002",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0002",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0002-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0002-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0002",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0003",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0003/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0003",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0003/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0003",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0003",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0003",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0003-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0003-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0003",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0004",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0004/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0004",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0004/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0004",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0004",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0004",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0004-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0004-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0004",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0005",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0005/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0005",
+      "predicate": "uses-dataset",
+      "target": "dataset:qwen2.5-0.5b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0005/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0005",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0005",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0005",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0005-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0005-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0005",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0006",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0006/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0006",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0006/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0006",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0006",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0006",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0006-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0006-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0006",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0007",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0007/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0007",
+      "predicate": "uses-dataset",
+      "target": "dataset:deepseek-r1-distill-qwen-1.5b-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0007/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0007",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0007",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0007",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0007-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0007-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0007",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0008",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0008/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0008",
+      "predicate": "uses-dataset",
+      "target": "dataset:gemma-2-2b-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0008/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0008",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0008",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0008",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0008-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0008-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0008",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0009",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0009/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0009",
+      "predicate": "uses-dataset",
+      "target": "dataset:qwen2.5-0.5b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0009/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0009",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0009",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0009",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0009-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0009-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0009",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0010",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0010/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0010",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0010/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0010",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0010",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0010",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0010-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0010-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0010",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0011",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0011/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0011",
+      "predicate": "uses-dataset",
+      "target": "dataset:qwen2.5-0.5b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0011/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0011",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0011",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0011",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0011-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0011-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0011",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0012",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0012/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0012",
+      "predicate": "uses-dataset",
+      "target": "dataset:llama-3.2-1b-instruct-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0012/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0012",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0012",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0012",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0012-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0012-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0012",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0013",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0013/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0013",
+      "predicate": "uses-dataset",
+      "target": "dataset:deepseek-r1-distill-qwen-1.5b-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0013/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0013",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0013",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0013",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0013-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0013-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0013",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0014",
+      "predicate": "uses-software",
+      "target": "software:profinfer",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0014/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0014",
+      "predicate": "uses-dataset",
+      "target": "dataset:gemma-2-2b-gguf",
+      "evidence": {
+        "source_file": "papers/profinfer/artifact/experiments/exp-0014/metadata.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0014",
+      "predicate": "uses-configuration",
+      "target": "configuration:profinfer-exp-0014",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "experiment:profinfer-exp-0014",
+      "predicate": "produces-result",
+      "target": "result:profinfer-exp-0014-outputs",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json"
+      }
+    },
+    {
+      "source": "result:profinfer-exp-0014-outputs",
+      "predicate": "derived-from",
+      "target": "configuration:profinfer-exp-0014",
+      "evidence": {
+        "source_file": "papers/profinfer/metadata/provenance.json",
+        "description": "The output bundle was generated using this captured configuration."
+      }
+    }
   ]
 }
 

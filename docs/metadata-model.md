@@ -6,13 +6,15 @@
 
 ## Entities and identifiers
 
-Entity collections cover people, organisations, software, datasets/model artifacts, experiments, venues, and funding projects. IDs are stable, lowercase, namespaced values such as `paper:profinfer`, `artifact:profinfer`, `person:bohua-zou`, `software:llama-cpp`, and `experiment:profinfer-exp-0001`. An ID must not be changed merely because a path changes, and experiment numbers are never reused.
+Entity collections cover people, organisations, software, datasets/model artifacts, experiments, configurations, generated-result bundles, venues, and funding projects. IDs are stable, lowercase, namespaced values such as `paper:profinfer`, `artifact:profinfer`, `person:bohua-zou`, `software:llama-cpp`, `configuration:profinfer-exp-0001`, and `result:profinfer-exp-0001-outputs`. An ID must not be changed merely because a path changes, and experiment numbers are never reused.
 
 Artifact experiments have two immutable identifiers: a readable sequential ID such as `exp-0001`, and an eight-character lowercase hexadecimal `uid`. The UID is deterministically derived from the first eight SHA-256 characters of `<artifact-id>/<experiment-id>`, is unique within the artifact, and serves only as a compact alias. Relationships and lineage continue to use stable namespaced or sequential IDs rather than the short UID.
 
 ## Relationships
 
-Relationships are directed records with `source`, `predicate`, `target`, and evidence. Predicates describe explicit facts such as `has-artifact`, `supports-paper`, `authored-by`, `uses-software`, `uses-dataset`, and `defines-experiment`. Every endpoint must resolve to an entity defined in the catalogue metadata.
+Relationships are directed records with `source`, `predicate`, `target`, and evidence. Predicates describe explicit facts such as `has-artifact`, `supports-paper`, `authored-by`, `implements-software`, `uses-software`, `uses-dataset`, `uses-configuration`, `produces-result`, and `derived-from`. Every endpoint must resolve to an entity defined in the catalogue metadata.
+
+Configuration snapshots and generated outputs are identified in `papers/<slug>/metadata/provenance.json`. Configuration entities record the originating experiment, local path, and SHA-256 digest. Result entities represent a generated-output bundle, record its files and manifest digest, and connect back to both the producing experiment and configuration. The data itself may remain excluded from Git while its identity and observed provenance remain versioned.
 
 ## Classification
 
@@ -24,8 +26,9 @@ Paper classification is multi-label across independent axes: research function, 
 2. Put manuscript material under `paper/` without changing its scientific content.
 3. Keep artifact internals intact and put `README.md` plus installation/reproduction guidance at the artifact root.
 4. Add paper, artifact, entity, and relationship metadata using unused stable IDs.
-5. Catalogue existing experiments with immutable `exp-####` identifiers and their deterministically derived eight-character hexadecimal UIDs; do not commit datasets, weights, or generated results.
-6. Reference the paper and artifact from `catalog.json`, update the root table, and run the validator.
+5. Catalogue existing experiments with immutable `exp-####` identifiers and their deterministically derived eight-character hexadecimal UIDs.
+6. Assign IDs and checksums to captured configurations and generated-result bundles, then connect them with `uses-configuration`, `produces-result`, and `derived-from` relationships. Do not commit datasets, weights, or generated results.
+7. Reference the paper and artifact from `catalog.json`, update the root table, and run the validator.
 
 ## Future interoperability
 

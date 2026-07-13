@@ -112,9 +112,13 @@ def main() -> int:
     profinfer_meta = ROOT / "papers/profinfer/metadata"
     entities_path = profinfer_meta / "entities.json"
     entities = load(entities_path, errors) or {}
+    provenance_path = profinfer_meta / "provenance.json"
+    provenance = load(provenance_path, errors) or {}
     entity_records: list[dict[str, Any]] = []
     for collection in ("people", "organisations", "software", "datasets", "experiments", "venues", "funding_projects"):
         entity_records.extend(entities.get(collection, []))
+    for collection in ("configurations", "results"):
+        entity_records.extend(provenance.get(collection, []))
 
     definition_ids = list(documents) + [record.get("id") for record in entity_records]
     for value, count in Counter(definition_ids).items():
@@ -127,6 +131,38 @@ def main() -> int:
         relpath = record.get("metadata_path")
         if relpath:
             check_path((entities_path.parent / relpath).resolve(), f"experiment {record.get('id')}", errors)
+
+    for record in provenance.get("configurations", []):
+        digest = record.get("sha256")
+        if not re.fullmatch(r"[0-9a-f]{64}", str(digest)):
+            errors.append(f"invalid configuration SHA-256 for {record.get('id')}: {digest}")
+        path = (provenance_path.parent / str(record.get("path"))).resolve()
+        if path.exists():
+            observed = hashlib.sha256(path.read_bytes()).hexdigest()
+            if observed != digest:
+                errors.append(f"configuration checksum mismatch for {record.get('id')}")
+        else:
+            warnings.append(f"local-only configuration is absent: {record.get('id')}")
+
+    for record in provenance.get("results", []):
+        digest = record.get("manifest_sha256")
+        if not re.fullmatch(r"[0-9a-f]{64}", str(digest)):
+            errors.append(f"invalid result manifest SHA-256 for {record.get('id')}: {digest}")
+        directory = (provenance_path.parent / str(record.get("path"))).resolve()
+        if directory.exists():
+            manifest = b""
+            for name in sorted(record.get("files", [])):
+                path = directory / name
+                if not path.exists():
+                    errors.append(f"missing generated file for {record.get('id')}: {name}")
+                    continue
+                file_digest = hashlib.sha256(path.read_bytes()).hexdigest()
+                manifest += f"{file_digest}  {name}\n".encode("utf-8")
+            observed = hashlib.sha256(manifest).hexdigest()
+            if observed != digest:
+                errors.append(f"result manifest checksum mismatch for {record.get('id')}")
+        else:
+            warnings.append(f"local-only result bundle is absent: {record.get('id')}")
 
     paper = documents.get("paper:profinfer", {})
     for axis, allowed in VOCABULARY.items():
@@ -194,7 +230,8 @@ def main() -> int:
         "has-artifact", "supports-paper", "authored-by", "affiliated-with", "uses-software",
         "uses-dataset", "produces-dataset", "defines-experiment", "evaluates-with",
         "implements-method", "extends-paper", "compares-against", "funded-by", "published-at",
-        "addresses-research-question", "classified-as", "produces-result",
+        "addresses-research-question", "classified-as", "produces-result", "implements-software",
+        "uses-configuration", "derived-from",
     }
     for rel in relationships.get("relationships", []):
         if rel.get("predicate") not in allowed_predicates:

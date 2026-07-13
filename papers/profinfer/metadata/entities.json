@@ -39,8 +39,7 @@
     { "id": "experiment:profinfer-exp-0014", "name": "exp-0014", "metadata_path": "../artifact/experiments/exp-0014/metadata.json" }
   ],
   "venues": [
-    { "id": "venue:arxiv", "name": "arXiv", "type": "preprint-repository", "url": "https://arxiv.org" }
+    { "id": "venue:mlsys", "name": "MLSys", "type": "conference", "url": null }
   ],
   "funding_projects": []
 }
-

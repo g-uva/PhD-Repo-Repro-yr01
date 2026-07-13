@@ -1,0 +1,328 @@
+{
+  "configurations": [
+    {
+      "id": "configuration:profinfer-exp-0001",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0001",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-05-58_llama-trace/config/config.json",
+      "sha256": "3f67ab62c15197965e8dca6d79c8a90e0f6564592a4dc85f2005db8c845b0906",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0002",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0002",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-06-57_llama-trace/config/config.json",
+      "sha256": "48c76be4d333ee445383fa10ab098c5aded807cd47edc1b65928469bf8596c4d",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0003",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0003",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-15-39_llama-trace/config/config.json",
+      "sha256": "f225f8edfc497fdd96677c754869b911c6129f2e79d034bd3dde7bb1c52c2265",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0004",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0004",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-19-01_llama-trace/config/config.json",
+      "sha256": "8bdeb6e3e24804b541af751084bc0cd6c38c225ec8de7d2ad6d79ed2ea455899",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0005",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0005",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-51-52_trace_qwen2.5-0.5B/config/config.json",
+      "sha256": "1791c980ce03c1fa3588af28ae74901b8baa24ac2f5d97acb0f429192a750ee4",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0006",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0006",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-52-27_trace_llama3.2-1B/config/config.json",
+      "sha256": "f184eec6b9c86ebd3b69720342eb5fd94b33af70c90b3c3f8cde502551d831d7",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0007",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0007",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-52-59_trace_deepseek-r1-qwen-1.5B/config/config.json",
+      "sha256": "754f5ec5466ad51127c1139248a473a67f7013c87ff053e2d5c1a27fdd49ee5a",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0008",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0008",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-53-13_trace_gemma2-2B/config/config.json",
+      "sha256": "b646125041fbcd7af8bff6bf6a8bd1f9d7074c665db0dfc99f5327258a5baf15",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0009",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0009",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-17-34_trace_qwen2.5-0.5B/config/config.json",
+      "sha256": "051c8d97f62700947f790f04ec4e3e4942e8134d908e28f42484ca50e6060aea",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0010",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0010",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-20-05_trace_llama3.2-1B/config/config.json",
+      "sha256": "843ac3172ee0bed175c56d54ac8e0770fbe33076156e82b03dfac20250574088",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0011",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0011",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-30-19_trace_qwen2.5-0.5B/config/config.json",
+      "sha256": "051c8d97f62700947f790f04ec4e3e4942e8134d908e28f42484ca50e6060aea",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0012",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0012",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-32-41_trace_llama3.2-1B/config/config.json",
+      "sha256": "843ac3172ee0bed175c56d54ac8e0770fbe33076156e82b03dfac20250574088",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0013",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0013",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-35-07_trace_deepseek-r1-qwen-1.5B/config/config.json",
+      "sha256": "adcc609e84993ddc060b0d64bf8c6821dfa95db174696e67dcc16b0ff7149310",
+      "tracked_in_git": false
+    },
+    {
+      "id": "configuration:profinfer-exp-0014",
+      "type": "experiment-configuration",
+      "experiment": "experiment:profinfer-exp-0014",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-37-49_trace_gemma2-2B/config/config.json",
+      "sha256": "1ac4dac7f3c2e330ac9003bff10767cfbed3c35835a772185f53beef17ab3a3d",
+      "tracked_in_git": false
+    }
+  ],
+  "results": [
+    {
+      "id": "result:profinfer-exp-0002-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0002",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-06-57_llama-trace",
+      "manifest_sha256": "919e7893b4bc63147726fccee20e7f71f254a4df952df076eea5ba689526af4b",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "process.pid",
+        "trace_llama3.2-1B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0003-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0003",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-15-39_llama-trace",
+      "manifest_sha256": "5f11eb3d00136ee8dbf40f7ec9de616314fb1925c153ae0a64ef48007e174e6b",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "process.pid",
+        "trace_llama3.2-1B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0004-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0004",
+      "path": "../artifact/Linux/experiments/2026-05-28-21-19-01_llama-trace",
+      "manifest_sha256": "6a4eb97cc78d3abeed87b7e6e832dadf462d1e4ea05ccb3cff5a5387435b6af6",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_llama3.2-1B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0005-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0005",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-51-52_trace_qwen2.5-0.5B",
+      "manifest_sha256": "c04771bb216a140b4e18b0cfda4889260bdd499f2f16ea103a030861ef6c58d0",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_qwen2.5-0.5B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0006-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0006",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-52-27_trace_llama3.2-1B",
+      "manifest_sha256": "82896454099ac1a98bce076f7ef5d70986e6b001831fa939f514eb5d1328516d",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_llama3.2-1B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0007-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0007",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-52-59_trace_deepseek-r1-qwen-1.5B",
+      "manifest_sha256": "f0493cf67d30fadd7a4bc3d177eca441220a505b144aefc8d303fbfaa16c66d3",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "process.pid",
+        "trace_deepseek-r1-qwen-1.5B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0008-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0008",
+      "path": "../artifact/Linux/experiments/2026-05-29-13-53-13_trace_gemma2-2B",
+      "manifest_sha256": "d303a601699232c4b58cce18fdb5d05b8ed869851ecf38807b37cc93e6c07efb",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_gemma2-2B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0009-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0009",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-17-34_trace_qwen2.5-0.5B",
+      "manifest_sha256": "8cf21e04a3484d418e080762a9ce062c46268819c460852fe8b281801ba5c687",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_qwen2.5-0.5B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0010-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0010",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-20-05_trace_llama3.2-1B",
+      "manifest_sha256": "ebeb50c1513d063ef62fe813c99b04decc8b489548a6e8dcf5ee0efc0ed17856",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_llama3.2-1B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0011-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0011",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-30-19_trace_qwen2.5-0.5B",
+      "manifest_sha256": "f02d28373f4c950137948e4a72a6c9d7e6f28d7bd756abcc485faf92c2b4e55d",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_qwen2.5-0.5B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0012-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0012",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-32-41_trace_llama3.2-1B",
+      "manifest_sha256": "3ec6be648c16ba493e8db12f7830093e9ccb0a96df8faa444d457700d9c20c8f",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_llama3.2-1B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0013-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0013",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-35-07_trace_deepseek-r1-qwen-1.5B",
+      "manifest_sha256": "a8975d0a578d287b34eb46613f77def9247dcc781e8ac76ee49a26c2e6672360",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_deepseek-r1-qwen-1.5B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    },
+    {
+      "id": "result:profinfer-exp-0014-outputs",
+      "type": "generated-output-bundle",
+      "experiment": "experiment:profinfer-exp-0014",
+      "path": "../artifact/Linux/experiments/2026-06-25-14-37-49_trace_gemma2-2B",
+      "manifest_sha256": "e79f0178ad56bce6d6db83aff6594cdd4d03ac6f3b51a54c1eec2a91d6c6fe12",
+      "manifest_algorithm": "SHA-256 over the sorted per-file SHA-256 manifest",
+      "files": [
+        "bpftool_map.json",
+        "bpftool_prog.json",
+        "metrics.json",
+        "process.pid",
+        "trace_gemma2-2B_f16_t2_p100.csv"
+      ],
+      "tracked_in_git": false
+    }
+  ],
+  "metadata_gaps": [
+    "Execution hardware, kernel, BCC version, and the Git commit at run time are not known.",
+    "Generated files are local-only and may be absent from another checkout; checksums identify the observed files without placing them in Git."
+  ]
+}
+

@@ -21,9 +21,11 @@
   "components": [
     { "name": "Linux profiler", "path": "../artifact/Linux" },
     { "name": "OpenHarmony profiler", "path": "../artifact/OpenHarmony" },
-    { "name": "Experiment provenance", "path": "../artifact/experiments/index.json" }
+    { "name": "Experiment provenance", "path": "../artifact/experiments/index.json" },
+    { "name": "Configuration and result provenance", "path": "provenance.json" }
   ],
-  "software": ["software:profinfer", "software:llama-cpp", "software:bcc", "software:ebpf"],
+  "provenance_path": "provenance.json",
+  "software": ["software:profinfer", "software:llama-cpp", "software:oh-llama-cpp", "software:bcc", "software:ebpf"],
   "datasets": [
     "dataset:qwen2.5-0.5b-instruct-gguf",
     "dataset:llama-3.2-1b-instruct-gguf",

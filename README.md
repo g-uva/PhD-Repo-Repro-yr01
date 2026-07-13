@@ -6,7 +6,7 @@ This repository is a versioned catalogue for research papers, their software art
 
 | Research work | Paper version | Artifact status | Artifact version | Paper | Artifact and installation | Metadata | Experiments |
 |---|---:|---|---:|---|---|---|---|
-| ProfInfer | arXiv v2 (2026) | Working; Linux CPU subset reproduced locally | `0.1.0` / `a311e7c` | [PDF](papers/profinfer/paper/profinfer-arxiv-2601.20755v2.pdf) | [README](papers/profinfer/artifact/README.md) | [Paper](papers/profinfer/metadata/paper.json) · [Artifact](papers/profinfer/metadata/artifact.json) | [Index](papers/profinfer/artifact/experiments/index.json) |
+| ProfInfer | MLSys 2026 manuscript | Working; Linux CPU subset reproduced locally | `0.1.0` / `a311e7c` | [PDF](papers/profinfer/paper/profinfer-mlsys-2026.pdf) | [README](papers/profinfer/artifact/README.md) | [Paper](papers/profinfer/metadata/paper.json) · [Artifact](papers/profinfer/metadata/artifact.json) | [Index](papers/profinfer/artifact/experiments/index.json) |
 
 External repositories used by the current artifact are pinned or marked unknown explicitly:
 
