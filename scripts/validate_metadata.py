@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sys
 from collections import Counter
@@ -146,9 +147,13 @@ def main() -> int:
     index_path = ROOT / "papers/profinfer/artifact/experiments/index.json"
     index = load(index_path, errors) or {}
     experiment_ids = [entry.get("id") for entry in index.get("experiments", [])]
+    experiment_uids = [entry.get("uid") for entry in index.get("experiments", [])]
     for value, count in Counter(experiment_ids).items():
         if count > 1:
             errors.append(f"duplicate experiment ID: {value}")
+    for value, count in Counter(experiment_uids).items():
+        if count > 1:
+            errors.append(f"duplicate experiment UID: {value}")
     issued_numbers: list[int] = []
     for entry in index.get("experiments", []):
         match = re.fullmatch(r"exp-([0-9]{4})", str(entry.get("id")))
@@ -156,12 +161,24 @@ def main() -> int:
             errors.append(f"invalid experiment ID: {entry.get('id')}")
             continue
         issued_numbers.append(int(match.group(1)))
+        uid = entry.get("uid")
+        if not re.fullmatch(r"[0-9a-f]{8}", str(uid)):
+            errors.append(f"invalid experiment UID for {entry.get('id')}: {uid}")
+        expected_uid = hashlib.sha256(
+            f"{index.get('artifact')}/{entry.get('id')}".encode("utf-8")
+        ).hexdigest()[:8]
+        if uid != expected_uid:
+            errors.append(
+                f"incorrect derived UID for {entry.get('id')}: expected {expected_uid}, got {uid}"
+            )
         metadata_path = index_path.parent / str(entry.get("path"))
         check_path(metadata_path, f"experiment index entry {entry.get('id')}", errors)
         metadata = load(metadata_path, errors) if metadata_path.exists() else None
         if metadata:
             if metadata.get("id") != entry.get("id"):
                 errors.append(f"experiment metadata ID mismatch in {metadata_path}")
+            if metadata.get("uid") != uid:
+                errors.append(f"experiment metadata UID mismatch in {metadata_path}")
             if metadata.get("status") not in EXPERIMENT_STATUSES:
                 errors.append(f"invalid status for {entry.get('id')}: {metadata.get('status')}")
             parent = metadata.get("parent")
@@ -203,4 +220,3 @@ def report(errors: list[str], warnings: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
