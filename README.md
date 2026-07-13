@@ -26,7 +26,7 @@ Generate an interactive, black-outlined Cytoscape.js visualisation of the entiti
 python3 scripts/generate_graph.py
 ```
 
-Open [`docs/research-graph.html`](docs/research-graph.html) in a browser. The graph data is embedded in the HTML; loading Cytoscape.js itself requires an internet connection.
+Open [`docs/research-graph.html`](docs/research-graph.html) in a browser. The default tree view starts from the paper, artifact, and software roots; click nodes to expand relationships, or use the project and legend-type checkboxes to control visibility. Project choices are generated from `catalog.json`, so future research entries are added to the selector automatically. The graph data is embedded in the HTML; loading Cytoscape.js itself requires an internet connection.
 
 ## Local-only dependencies and data
 
